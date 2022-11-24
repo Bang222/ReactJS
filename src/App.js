@@ -8,7 +8,6 @@ const App = () => {
     return (
         <div className="App">
             <header className="App-header">
-                <ContainnerUser/>
             </header>
             <ToastContainer/>
         </div>
