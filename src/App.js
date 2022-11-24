@@ -10,7 +10,7 @@ const App = () => {
             <header className="App-header">
                 <ContainnerUser/>
             </header>
-            <ToastContainer />
+            <ToastContainer/>
         </div>
     );
 }
