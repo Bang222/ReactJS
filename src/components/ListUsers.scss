@@ -1,0 +1,29 @@
+.App-header {
+  .table_list-Users {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100vw;
+    margin-top:1vw;
+    text-align: left;
+    border-collapse: collapse;
+    .table_list-Users--thead {
+      .table-list_Users--th {
+        border: 1px solid #ddd;
+        padding: 8px;
+        background-color: #04AA6D;
+        color: white;
+      }
+    }
+    .table_list-Users--tbody {
+      .table-list_Users--td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+        background-color: white;
+        color: black;
+        .delete-user{
+          margin-right:1vw;
+        }
+      }
+    }
+  }
+}
