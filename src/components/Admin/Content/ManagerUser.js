@@ -1,4 +1,5 @@
 import ModalCreate from "./ModalCreate";
+import './ModalCreate.scss'
 
 const ManagerUser =() =>{
     return(
@@ -9,11 +10,11 @@ const ManagerUser =() =>{
             <div className="user-content">
                 <div>
                    <button>Add New User</button>
-                    <ModalCreate/>
                 </div>
                 <div>
                     Table User
                 </div>
+                <ModalCreate/>
             </div>
         </div>
     )
