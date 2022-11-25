@@ -2,12 +2,12 @@ import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import {Col, Form, Row} from "react-bootstrap";
-import timer from "../../../assets/images/Tim.jpg"
 import { FaBars } from 'react-icons/fa';
 import { FcPlus } from 'react-icons/fc';
+import {toast} from "react-toastify";
 
-const ModalCreate= ()=> {
-    const [show, setShow] = useState(false);
+const ModalCreate= (props)=> {
+    const {show, setShow} = props;
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
     // -----------------------Declare state----------------------------------
@@ -18,6 +18,10 @@ const ModalCreate= ()=> {
     const [Image,SetImage] = useState('');
     const[PreviewImage,SetPreviewImage] = useState('');
 
+    const HandleSubmitCreateUser = () =>{
+       alert('bang')
+    }
+
     const hanleUploadImage  =(event) =>{
         if(event.target && event.target.files && event.target.files[0]) {
             SetPreviewImage(URL.createObjectURL(event.target.files[0]))
@@ -27,9 +31,9 @@ const ModalCreate= ()=> {
     }
     return (
         <>
-            <Button variant="primary" onClick={handleShow}>
-                Launch demo modal
-            </Button>
+            {/*<Button variant="primary" onClick={handleShow}>*/}
+            {/*    Launch demo modal*/}
+            {/*</Button>*/}
 
             <Modal
                 show={show}
@@ -95,7 +99,7 @@ const ModalCreate= ()=> {
                     <Button variant="secondary" onClick={handleClose}>
                         Close
                     </Button>
-                    <Button variant="primary" onClick={handleClose}>
+                    <Button variant="primary" onClick={() =>HandleSubmitCreateUser()}>
                         Save Changes
                     </Button>
                 </Modal.Footer>

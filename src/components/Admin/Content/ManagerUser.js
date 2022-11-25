@@ -1,7 +1,9 @@
 import ModalCreate from "./ModalCreate";
 import './ModalCreate.scss'
+import {useState} from "react";
 
 const ManagerUser =() =>{
+    const [ShowCreateUser,SetShowCreateUser]=useState(false)
     return(
         <div className="manage-user-container">
             <div className="manage-user-title">
@@ -9,12 +11,17 @@ const ManagerUser =() =>{
             </div>
             <div className="user-content">
                 <div>
-                   <button>Add New User</button>
+                   <button className="btn btn-primary"
+                   onClick={()=>SetShowCreateUser(true)}
+                   >Add New User</button>
                 </div>
                 <div>
                     Table User
                 </div>
-                <ModalCreate/>
+                <ModalCreate
+                show={ShowCreateUser}
+                setShow={SetShowCreateUser}
+                />
             </div>
         </div>
     )

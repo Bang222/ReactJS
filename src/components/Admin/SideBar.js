@@ -11,12 +11,12 @@ import {
 
 import {Link} from 'react-router-dom'
 
-import { FaTachometerAlt, FaGem, FaList, FaGithub, FaRegLaughWink, FaHeart } from 'react-icons/fa';
-import sidebarBg from '../../assets/images/Tim.jpg';
+import {FaTachometerAlt, FaGem, FaList, FaGithub, FaRegLaughWink, FaHeart} from 'react-icons/fa';
+import sidebarBg from '../../assets/images/nice.jpg';
 
 
 const SideBar = (props) => {
-    const { image, collapsed, toggled, handleToggleSidebar } = props;
+    const {image, collapsed, toggled, handleToggleSidebar} = props;
     return (
         <>
             <ProSidebar
@@ -39,27 +39,34 @@ const SideBar = (props) => {
                             whiteSpace: 'nowrap',
                         }}
                     >
-                        ZeusBD
+                        <Link to="/"
+                              style={{
+                                  textDecoration: 'none',
+                                  color: 'white',
+                                  fontSize: '25px',
+                                  fontWeight: '700'
+                              }}
+                        > ZeusBD(HOME)</Link>
                     </div>
                 </SidebarHeader>
 
                 <SidebarContent>
                     <Menu iconShape="circle">
                         <MenuItem
-                            icon={<FaTachometerAlt />}
+                            icon={<FaTachometerAlt/>}
                             suffix={<span className="badge red">New</span>}
                         >
                             dashboard
                             <Link to="/Admin"/>
                         </MenuItem>
-                        <MenuItem icon={<FaGem />}> Manager Users
+                        <MenuItem icon={<FaGem/>}> Manager Users
                             <Link to="Manager-User"/>
                         </MenuItem>
                     </Menu>
                     <Menu iconShape="circle">
                         <SubMenu
                             suffix={<span className="badge yellow">3</span>}
-                            icon={<FaRegLaughWink />}
+                            icon={<FaRegLaughWink/>}
                         >
                             <MenuItem> 1</MenuItem>
                             <MenuItem> 2</MenuItem>
@@ -69,7 +76,7 @@ const SideBar = (props) => {
                     </Menu>
                 </SidebarContent>
 
-                <SidebarFooter style={{ textAlign: 'center' }}>
+                <SidebarFooter style={{textAlign: 'center'}}>
                     <div
                         className="sidebar-btn-wrapper"
                         style={{
@@ -82,8 +89,8 @@ const SideBar = (props) => {
                             className="sidebar-btn"
                             rel="noopener noreferrer"
                         >
-                            <FaGithub />
-                            <span style={{ whiteSpace: 'nowrap', textOverflow: 'ellipsis', overflow: 'hidden' }}>
+                            <FaGithub/>
+                            <span style={{whiteSpace: 'nowrap', textOverflow: 'ellipsis', overflow: 'hidden'}}>
                                 viewSource
                             </span>
                         </a>
